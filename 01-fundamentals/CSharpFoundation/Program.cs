@@ -1,4 +1,5 @@
-﻿using CSharpFoundation.Exercises;
+﻿using CSharpFoundation.Debugging;
+using CSharpFoundation.Exercises;
 using CSharpFundamentals.LINQ;
 using System;
 
@@ -14,6 +15,10 @@ if (int.TryParse(input, out var id))
     else if (id >= 51 && id <= 59)
     {
         LinqTopics.Run(id);      // LINQ (51–59)
+    }
+    else if (id >= 60 && id <= 67)
+    {
+        DebugTopics.Run(id);  // Debugging Tutorial
     }
     else
     {

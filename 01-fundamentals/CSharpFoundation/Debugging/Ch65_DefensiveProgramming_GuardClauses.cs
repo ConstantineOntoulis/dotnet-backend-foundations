@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
+// Validate inputs before processing to prevent invalid program states.
+// Key terms in this chapter:
+// Defensive Programming: Writing code that checks assumptions early.
+// Guard Clause: An early validation check that stops execution when input is invalid.
+// ArgumentOutOfRangeException: Thrown when a value is outside allowed range.
+// ArgumentNullException: Thrown when a required reference argument is null.
+// Meaningful Exception Message: A message that explains what is wrong and why.
+
 namespace CSharpFoundation.Debugging
 {
     internal class Ch65_DefensiveProgramming_GuardClauses

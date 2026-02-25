@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
+// Introduce debugging as a process for locating and fixing bugs.
+// Reproduce a faulty program on purpose so we can inspect it.
+// Key terms in this chapter:
+// Bug: A defect in code that causes incorrect behavior.
+// Reproduction: Running the program in a way that reliably shows the bug.
+// Expected vs Actual Output
+
 namespace CSharpFoundation.Debugging
 {
     internal class Ch60_DebuggingIntro_BugRepro

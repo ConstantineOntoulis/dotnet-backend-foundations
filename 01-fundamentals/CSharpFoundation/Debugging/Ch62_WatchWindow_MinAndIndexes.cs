@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
+// Learn to monitor important values while stepping through code.
+// Key terms in this chapter:
+// Watch Window: A debugging panel where we manually track variables/expressions.
+// Expression: A value or computation (e.g., min, list[0], list[i]).
+// Scope: Where a variable exists and can be accessed.
+// * Example: 'i' is only available inside the for-loop scope.
+
 namespace CSharpFoundation.Debugging
 {
     internal class Ch62_WatchWindow_MinAndIndexes

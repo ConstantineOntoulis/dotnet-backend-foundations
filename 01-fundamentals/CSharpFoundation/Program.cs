@@ -3,7 +3,7 @@ using CSharpFoundation.Exercises;
 using CSharpFundamentals.LINQ;
 using System;
 
-Console.Write("Chapter number (1–59): ");
+Console.Write("Chapter number (1–67): ");
 var input = Console.ReadLine();
 
 if (int.TryParse(input, out var id))
@@ -22,7 +22,7 @@ if (int.TryParse(input, out var id))
     }
     else
     {
-        Console.WriteLine("Out of range. Use 1–50 (Exercises) or 51–59 (LINQ).");
+        Console.WriteLine("Out of range. Use 1–50 (Exercises) or 51–59 (LINQ) or 60-67 (Debugging).");
     }
 }
 else

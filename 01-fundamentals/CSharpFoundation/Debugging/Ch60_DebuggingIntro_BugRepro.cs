@@ -13,10 +13,10 @@ namespace CSharpFoundation.Debugging
 {
     internal class Ch60_DebuggingIntro_BugRepro
     {
-        public static void Run(string[] args)
+        public static void Run()
         {
             {
-                var numbers = new List<int> { 8, 9, 10, 11, 12, 13 };
+                var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
                 var smallests = GetSmallests(numbers, 3);
 
                 foreach (var number in smallests)
@@ -45,7 +45,7 @@ namespace CSharpFoundation.Debugging
 
             for (var i = 1; i < list.Count; i++)
             {
-                if (list[i] < min)
+                if (list[i] > min)
                     min = list[i];
             }
             return min;

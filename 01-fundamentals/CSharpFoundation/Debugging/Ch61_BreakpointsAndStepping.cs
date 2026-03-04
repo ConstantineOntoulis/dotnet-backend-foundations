@@ -19,7 +19,8 @@ namespace CSharpFoundation.Debugging
         public static void Run()
         {
             var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
-            var smallests = GetSmallests(numbers, 3);
+            var smallests = GetSmallests(numbers, 3); // added the first breakpoint here and noticed that
+                                                      // this method returns the number 6 so we pressed F11 to step into it
 
             foreach (var number in smallests)
                 Console.WriteLine(number);

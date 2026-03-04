@@ -45,7 +45,7 @@ namespace CSharpFoundation.Debugging
 
             for (var i = 1; i < list.Count; i++)
             {
-                if (list[i] > min)
+                if (list[i] < min) //bug
                     min = list[i];
             }
             return min;

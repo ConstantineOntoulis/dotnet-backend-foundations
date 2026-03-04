@@ -34,7 +34,8 @@ namespace CSharpFoundation.Debugging
 
             while (smallests.Count < count)
             {
-                var minim = GetSmallest(list);
+                var minim = GetSmallest(list); // we noticed that this method is indeed the faulty one so we 
+                                               // entered it by pressing F11 and then we skipped with F10 until we spot the issue
                 smallests.Add(minim);
                 list.Remove(minim);
             }

@@ -15,8 +15,9 @@ namespace CSharpFoundation.Debugging
     {
         public static void Run()
         {
-            var numbers = new List<int> { 1, 2 };
+            var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
             var smallests = GetSmallests(numbers, 3); 
+
             foreach (var number in smallests)
                 Console.WriteLine(number);
 
@@ -43,7 +44,8 @@ namespace CSharpFoundation.Debugging
         }
         public static int GetSmallest(List<int> list)
         {
-            var min = list[0];
+            var min = list[0]; // Debug -> Windows -> Call Stack: Opens a window showing all the processes so far
+                               // With the breakpoint being at the very top. When doubleclicking, it brings us there
             for (var i = 1; i < list.Count; i++)
             {
                 if (list[i] < min)

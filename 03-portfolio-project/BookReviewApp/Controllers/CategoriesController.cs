@@ -16,7 +16,7 @@ namespace BookReviewApp.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Category>)]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Category>))]
 
         public IActionResult GetCategories()
         {

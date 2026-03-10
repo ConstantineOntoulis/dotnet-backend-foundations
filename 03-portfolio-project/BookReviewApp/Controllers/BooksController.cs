@@ -26,5 +26,37 @@ namespace BookReviewApp.Controllers
             }
             return Ok(books);
         }
+
+        [HttpGet("{bookId}")]
+        [ProducesResponseType(200, Type=typeof(Book))]
+        [ProducesResponseType(400)]
+        public IActionResult GetBook(int bookId)
+        {
+            if (!_bookRepository.BookExists(bookId)) 
+                return BadRequest("Book not found.");
+
+            var book = _bookRepository.GetBook(bookId);
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            
+            return Ok(book);
+        }
+
+        [HttpGet("{bookId}/rating")]
+        [ProducesResponseType(200, Type = typeof(decimal))]
+        [ProducesResponseType(400)]
+        public IActionResult GetBookRating(int bookId)
+        {
+            if (!_bookRepository.BookExists(bookId))
+                return BadRequest("Book not found.");
+
+            var rating = _bookRepository.GetBookRating(bookId);
+
+            if(!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(rating);
+        }
     }
 }

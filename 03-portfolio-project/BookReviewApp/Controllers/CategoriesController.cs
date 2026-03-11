@@ -1,4 +1,5 @@
-﻿using BookReviewApp.Interfaces;
+﻿using BookReviewApp.Dto;
+using BookReviewApp.Interfaces;
 using BookReviewApp.Models;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
@@ -16,27 +17,38 @@ namespace BookReviewApp.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Category>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<CategoryDto>))]
 
         public IActionResult GetCategories()
         {
             var categories = _categoryRepository.GetCategories();
+            var categoriesDtos = categories.Select(c => new CategoryDto
+            {
+                Id = c.Id,
+                Name = c.Name
+            }).ToList();
+
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
-            return Ok(categories);
+            return Ok(categoriesDtos);
         }
 
         [HttpGet("{categoryId}")]
-        [ProducesResponseType(200, Type = typeof(Models.Category))]
+        [ProducesResponseType(200, Type = typeof(CategoryDto))]
         [ProducesResponseType(400)]
         public IActionResult GetCategory(int id)
         {
             if(!_categoryRepository.CategoryExists(id))
                 return BadRequest("Category not found.");
             var category = _categoryRepository.GetCategory(id);
+            var categoryDto = new CategoryDto
+            {
+                Id = category.Id,
+                Name = category.Name
+            };
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            return Ok(category);
+            return Ok(categoryDto);
 
         }
         [HttpGet("{categoryId}/books")]

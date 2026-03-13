@@ -6,7 +6,7 @@ namespace BookReviewApp.Interfaces
     {
         ICollection<Author> GetAllAuthors();
         Author GetAuthorById(int AuthorId);
-        ICollection<Author> GetAuthorOfBooks(int bookId);
+        ICollection<Author> GetAuthorOfBook(int bookId);
         ICollection<Book> GetBooksByAuthor(int authorId);
         bool AuthorExists(int authorId);
     }

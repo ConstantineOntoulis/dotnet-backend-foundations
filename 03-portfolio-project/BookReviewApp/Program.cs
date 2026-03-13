@@ -14,6 +14,8 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 // Dependency injection for our Repository
 builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICountryRepository, CountriesRepository>();
 
 builder.Services.AddOpenApi();
 

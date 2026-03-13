@@ -4,10 +4,10 @@ using BookReviewApp.Models;
 
 namespace BookReviewApp.Repository
 {
-    public class CountryRepository : ICountryRepository
+    public class CountriesRepository : ICountryRepository
     {
         private readonly DataContext _context;
-        public CountryRepository(DataContext context)
+        public CountriesRepository(DataContext context)
         {
             _context = context;
         }

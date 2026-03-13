@@ -34,5 +34,15 @@ namespace BookReviewApp.Repository
         {
             return _context.Authors.Where(a => a.Country.Id == countryId).ToList();
         }
+        public bool UpdateCountry(Country country)
+        {
+            _context.Update(country);
+            return Save();
+        }
+        private bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
+        }
     }
 }

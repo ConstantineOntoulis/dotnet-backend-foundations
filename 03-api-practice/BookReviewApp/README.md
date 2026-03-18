@@ -1,24 +1,24 @@
 # BookReviewApp
 
-> Early ASP.NET Core Web API project built around a book review domain.
+> Introductory ASP.NET Core Web API project built around a book review domain.
 
 ## Overview
 
-`BookReviewApp` explores backend application structure in .NET through a relational, database-backed API covering books, authors, categories, countries, reviewers, and reviews.
+`BookReviewApp` is an early backend practice project built with ASP.NET Core, Entity Framework Core, and SQL Server. The API is organized around a simple relational domain that includes books, authors, categories, countries, reviewers, and reviews.
 
-The project is not intended as a finished production system. Its value lies in exposing the main moving parts of a typical ASP.NET Core + EF Core backend in a manageable learning context.
+The project is not intended as a production-ready system. Its purpose is to explore how a database-backed .NET API is structured, how HTTP endpoints are organized, and how data access is handled through EF Core and repository-based abstractions.
 
 ## What the project includes
 
 - ASP.NET Core Web API structure
-- controller-based endpoint definitions
-- DTOs for request/response shaping
+- controller-based routing and endpoint definitions
+- DTO usage across parts of the API surface
 - repository interfaces and implementations
 - Entity Framework Core with SQL Server
 - migrations and seeded sample data
-- dependency injection setup in `Program.cs`
+- dependency injection configured in `Program.cs`
 - OpenAPI / Swagger support
-- Postman and HTTP request-based API testing
+- API testing with Postman
 
 ## Project layout
 
@@ -34,4 +34,4 @@ The project is not intended as a finished production system. Its value lies in e
 
 ## Why it matters
 
-This project represents an early shift from language learning into backend architecture, data persistence, and API design in the .NET ecosystem.
+This project represents an early step from foundational C# practice into backend development with ASP.NET Core, relational data modelling, and API-oriented application structure.

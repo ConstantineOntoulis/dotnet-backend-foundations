@@ -1,8 +1,9 @@
-# csharp-initiation
+# dotnet-backend-foundations
 
 > Practical C#/.NET study repository covering language fundamentals, debugging, LINQ, console applications, and early ASP.NET Core Web API work.
 
 `C#` `ASP.NET Core` `Entity Framework Core` `SQL Server` `LINQ` `Postman`
+
 ---
 
 ## Overview
@@ -17,7 +18,7 @@ It is intended as a record of technical growth and hands-on implementation rathe
 |---|---|
 | `01-fundamentals` | Core C# study, debugging, and LINQ foundations |
 | `02-mini-projects` | Console-based practice and smaller applied exercises |
-| `03-portfolio-project` | Early backend/API work with ASP.NET Core, EF Core, and SQL Server |
+| `03-api-practice` | Early backend/API work with ASP.NET Core, EF Core, and SQL Server |
 | `postman` | API testing material used during request verification |
 
 ## Featured areas

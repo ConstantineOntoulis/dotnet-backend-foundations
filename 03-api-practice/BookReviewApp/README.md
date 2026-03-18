@@ -31,7 +31,3 @@ The project is not intended as a production-ready system. Its purpose is to expl
 | `Models` | domain entities |
 | `Repository` | repository implementations |
 | `Migrations` | EF Core migration history |
-
-## Why it matters
-
-This project represents an early step from foundational C# practice into backend development with ASP.NET Core, relational data modelling, and API-oriented application structure.
